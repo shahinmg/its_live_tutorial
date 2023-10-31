@@ -1,5 +1,5 @@
 # Ignore everything
-*
+/*
 !.gitignore
 !its_live_web_app_tutorial.ipynb
 !/geoms 
