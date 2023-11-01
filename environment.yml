@@ -1,0 +1,10 @@
+name: its_live_tutorial
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - rioxarray
+  - geopandas
+  - jupyterlab
+  - h5netcdf
+  - netcdf4
