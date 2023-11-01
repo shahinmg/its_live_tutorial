@@ -2,7 +2,7 @@
 The main purpose of this tutorial is to show how to use NASA's
 [its_live web portal](https://nsidc.org/apps/itslive/) to download image pair velocities. 
 
-Many other tutorials exist that are great. For example Emma Marshal's [Using xarray to examine cloud-based glacier surface velocity data](https://e-marshall.github.io/itslive/intro.html). In the future make a tutorial using Emma's  [itslivetools](https://github.com/e-marshall/itslivetools) for Greenland specific data.
+Many other tutorials exist that are great. For example Emma Marshal's [Using xarray to examine cloud-based glacier surface velocity data](https://e-marshall.github.io/itslive/intro.html). Her tools utilizes its_live's data cubes so you can use the image pair velocity products without haveing to download them. In the future, I plan to  make a tutorial using Emma's  [itslivetools](https://github.com/e-marshall/itslivetools) for Greenland specific data.
 
 ## installation
 Below are instructions for installation with a UNIX terminal.
