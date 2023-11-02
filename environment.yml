@@ -8,3 +8,4 @@ dependencies:
   - jupyterlab
   - h5netcdf
   - netcdf4
+  - zarr
