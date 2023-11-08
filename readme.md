@@ -30,3 +30,31 @@ In the `its_live_tutorial` directory run
 jupyter lab
 ```
 and open the `its_live_web_app_tutorial.ipynb` notebook
+
+### its_live  API_tutorial
+
+Similar to the first tutorial, the `ITS_LIVE API_tutorial.ipynb` shows how to fetch its_live image pair velocities from their s3 bucket and use the data without having to download it. Also, in this tutorial we calculate strain rates from [`iceutils`](https://github.com/bryanvriel/iceutils). Similar to the [`measures_strain_rates`](https://github.com/shahinmg/measures_strain_rates) repo. 
+
+## Installation
+
+If you installed the packages in the `environment.yml` from the first tutorial, you are good to go. if not follow the same instructions as the `its_live web portal tutorial`.
+
+To install `iceutils`, you may clone a read-only version of the repository:
+
+```
+git clone https://github.com/bryanvriel/iceutils.git
+```
+Or, if you are developer, you may clone with SSH:
+
+```
+git clone git@github.com:bryanvriel/iceutils.git
+```
+Then, simply run `pip install .` in the main repository directory to install.
+
+In the cloned directory, you'll find several Python source files, each containing various functions and classes. While the naming of the source files gives a hint about what they contain, all functions are classes are imported into a common namespace. For example, the file `stress.py` contains a function `compute_stress_strain()`. This function would be called as follows:
+
+```python
+import iceutils as ice
+
+stress_strain = ice.compute_stress_strain(vx, vy)
+```

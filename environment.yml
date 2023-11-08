@@ -6,6 +6,17 @@ dependencies:
   - rioxarray
   - geopandas
   - jupyterlab
-  - h5netcdf
-  - netcdf4
-  - zarr
+  - scipy
+  - gdal 
+  - h5py
+  - pyproj
+  - scikit-image
+  - scikit-learn
+  - pip:
+    - ipympl
+    - zarr
+    - h5netcdf
+    - netcdf4
+    - tqdm
+    - pint
+    - cvxopt
