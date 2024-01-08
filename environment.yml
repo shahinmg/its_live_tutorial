@@ -12,6 +12,7 @@ dependencies:
   - pyproj
   - scikit-image
   - scikit-learn
+  - s3fs
   - pip:
     - ipympl
     - zarr
