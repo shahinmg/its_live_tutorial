@@ -35,6 +35,12 @@ and open the `its_live_web_app_tutorial.ipynb` notebook
 
 Similar to the first tutorial, the `ITS_LIVE API_tutorial.ipynb` shows how to fetch its_live image pair velocities from their s3 bucket and use the data without having to download it. Also, in this tutorial we calculate strain rates from [`iceutils`](https://github.com/bryanvriel/iceutils). Similar to the [`measures_strain_rates`](https://github.com/shahinmg/measures_strain_rates) repo. 
 
+### its_live_datacube_tutorial.ipynb & its_live_datacube_term_poly_tutorial
+
+These tutorials use the ITS_LIVE datacube instead of the API
+`its_live_datacube_tutorial.ipynb` plots a velocity time series at Helehim Glacier. 
+`its_live_datacube_term_poly_tutorial` clips a terminus polygon at sermeq kujalleq and calculates average terminus velocity.
+
 ## Installation
 
 If you installed the packages in the `environment.yml` from the first tutorial, you are good to go. if not follow the same instructions as the `its_live web portal tutorial`.
