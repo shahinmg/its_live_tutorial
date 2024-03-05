@@ -3,6 +3,7 @@
 !.gitignore
 !its_live_web_app_tutorial.ipynb
 !/geoms 
+!/merged_geoms
 !/images
 !environment.yml
 !store_its_live_velocities_2022.json
