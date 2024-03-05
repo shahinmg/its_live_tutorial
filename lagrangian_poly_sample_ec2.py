@@ -117,7 +117,7 @@ def rio_clip(dataset,gdf,date_list,crs):
 # %%
 date_list = pd.to_datetime(eqi_vels.mid_date) #creates a list which we will split up to divide the parallelized work 
 
-split_size = 50
+split_size = 100
 date_lists = [date_list[x:x+split_size] for x in range(0, len(date_list), split_size)]
 
 # %%
@@ -131,7 +131,7 @@ for date_list in date_lists:
     args.append((eqi_vels,term_polys,date_list,crs))
     
 # %%
-with Pool(processes=cpu_count()-4) as pool:
+with Pool(processes=cpu_count()) as pool:
     result = pool.starmap(rio_clip, args)
     
 # %%
