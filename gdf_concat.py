@@ -20,8 +20,13 @@ for name in glacier_names:
     
     rdf = gpd.GeoDataFrame(gpd.pd.concat(gdfs, ignore_index=True), crs=gdfs[0].crs)
     rdf['date'] = dates
-    rdf.drop(columns=['col1'], inplace=True)
-    rdf.to_crs(crs=None,epsg=3413,inplace=True)
+    
+    if 'FID' in rdf.columns:
+        rdf.drop(columns=['FID'], inplace=True)
+        rdf.to_crs(crs=None,epsg=3413,inplace=True)
+    elif 'col1' in rdf.columns:
+        rdf.drop(columns=['col1'], inplace=True)
+        rdf.to_crs(crs=None,epsg=3413,inplace=True)
     
     op = '/media/laserglaciers/upernavik/its_live_tutorial/merged_geoms/'
     rdf.to_file(f'{op}{name}_merged.gpkg',driver='GPKG',crs="EPSG:3413")
