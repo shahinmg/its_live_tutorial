@@ -68,7 +68,7 @@ def read_in_s3(http_url, chunks='auto'):
 
 # %%
 catalog = gpd.read_file('https://its-live-data.s3.amazonaws.com/datacubes/catalog_v02.json') # ITS_LIVE data catalog where all the paths are defined
-path = '/media/laserglaciers/upernavik/its_live_tutorial/merged_geoms/EQI_merged.gpkg'
+path = './merged_geoms/EQI_merged.gpkg'
 eqi_poly = gpd.read_file(path)
 eqi_centroid = eqi_poly.centroid.to_crs(crs='EPSG:4326')
 eqi_centroid = gpd.GeoDataFrame(geometry=eqi_centroid,crs=4326)
@@ -81,7 +81,7 @@ eqi_vels = eqi_vels.sortby('mid_date')
 eqi_vels.rio.write_crs('EPSG:3413',inplace=True)
 
 # %%
-term_polys_path = '/media/laserglaciers/upernavik/its_live_tutorial/merged_geoms/EQI_merged.gpkg'
+term_polys_path = './merged_geoms/EQI_merged.gpkg'
 term_polys = gpd.read_file(term_polys_path)
 
 # %%
