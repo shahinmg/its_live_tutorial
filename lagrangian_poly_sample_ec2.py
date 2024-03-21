@@ -103,6 +103,7 @@ eqi_vels = eqi_vels.isel(mid_date=matched_date_dt_idx) # use isel to grab the da
 def rio_clip(dataset,gdf,date_list,crs):
     velocity = []
     area = []
+    date_dt_list = []
     for date in date_list:
         geom_values = gdf[gdf['date'] == pd.to_datetime(date.date())].geometry.values
         dataset_sample_clip = dataset.v.sel(mid_date=date).rio.clip(geom_values,crs,drop=True,invert=False,all_touched=True)
@@ -111,8 +112,8 @@ def rio_clip(dataset,gdf,date_list,crs):
         
         velocity.append(mean_arr)
         area.append(area_count)
-        
-    return area, velocity
+        date_dt_list.append(dataset_sample_clip.date_dt)
+    return area, velocity, date_dt_list
 
 # %%
 date_list = pd.to_datetime(eqi_vels.mid_date) #creates a list which we will split up to divide the parallelized work 
